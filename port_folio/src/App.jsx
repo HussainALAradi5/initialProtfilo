@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import MainContainer from './components/MainContainer'
 import './App.css'
 
 const App = () => {
   return (
     <div className="app">
-      <MainContainer />{' '}
+      <BrowserRouter>
+        {' '}
+        <MainContainer />
+      </BrowserRouter>
     </div>
   )
 }
