@@ -27,6 +27,39 @@ const NavBar = () => {
       <div>
         <img src="" alt="logo" />
       </div>
+      <a
+        href=""
+        className={`navBarMenu ${active ? `active` : ''}`}
+        onClick={opeenNav}
+      >
+        <div className="navBarMenuLine"></div>
+        <div className="navBarMenuLine"></div>
+        <div className="navBarMenuLine"></div>
+      </a>
+      <div className={`navBarItems ${active ? `active` : ''}`}>
+        <ul>
+          <li>
+            <Link onClick={closeNav} className="navBarContent">
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link onClick={closeNav} className="aboutMe">
+              About me
+            </Link>
+          </li>
+          <li>
+            <Link onClick={closeNav} className="skills">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link onClick={closeNav} className="contectMeButton">
+              Contact Me
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
