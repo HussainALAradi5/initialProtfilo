@@ -106,5 +106,7 @@ ul {
   list-style-type: none;
 }
 .skills{
-  
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

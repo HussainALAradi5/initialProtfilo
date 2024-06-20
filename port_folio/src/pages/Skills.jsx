@@ -30,11 +30,10 @@ const Skills = () => {
                     {skill.image && (
                       <img
                         src={skill.image}
-                        alt={skill.language || skill}
+                        alt={skill.language || skill.technology}
                         className="skillImage"
                       />
                     )}
-                    <p>{skill.language || 'No Languge'}</p>
                   </li>
                 )
               })}
