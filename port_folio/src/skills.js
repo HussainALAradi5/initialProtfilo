@@ -1,5 +1,5 @@
-skills = {
-  programmingLanguge: [
+const skills = {
+  programmingLanguage: [
     { language: 'java', image: './assets/java.png' },
     { language: 'javascript', image: './assets/javascript.png' },
     { language: 'python', image: './assets/python.png' },

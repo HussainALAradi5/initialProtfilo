@@ -1,6 +1,10 @@
-import skills from '../skills' // Import the skills object
+import skills from '../skills.js'
 
 const Skills = () => {
+  if (!skills) {
+    return <p>No skills data available.</p>
+  }
+
   return (
     <div className="skills">
       <div className="skillsContainer">
@@ -11,20 +15,29 @@ const Skills = () => {
         {Object.keys(skills).map((category) => (
           <div key={category} className="skillCategory">
             <h3>{category}</h3>
+            {console.log('category=', category)}
             <ul>
-              {skills[category].map((skill) => (
-                <li key={skill.language || skill} className="skillItem">
-                  {skill.image && (
-                    <img
-                      src={skill.image}
-                      alt={skill.language || skill}
-                      className="skillImage"
-                    />
-                  )}
-                  {skill.icon && <i className={`skillIcon ${skill.icon}`}></i>}
-                  <p>{skill.language || skill}</p>
-                </li>
-              ))}
+              {console.log(
+                `skills[category] ==> ${JSON.stringify(skills[category])}`
+              )}
+              {skills[category].map((skill) => {
+                console.log(`skill ${JSON.stringify(skill)}`)
+                return (
+                  <li
+                    key={`${category}-${skill.language || skill.technology}`}
+                    className="skillItem"
+                  >
+                    {skill.image && (
+                      <img
+                        src={skill.image}
+                        alt={skill.language || skill}
+                        className="skillImage"
+                      />
+                    )}
+                    <p>{skill.language || 'No Languge'}</p>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         ))}

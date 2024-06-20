@@ -1,7 +1,8 @@
 import HeroSection from './HeroSection'
 import NavBar from '../components/NavBar'
+import Skills from './Skills'
 import { Router, Route } from 'react-router-dom'
-Router
+
 const Home = () => {
   return (
     <div className="home">
@@ -10,6 +11,7 @@ const Home = () => {
       </div>
 
       <HeroSection />
+      <Skills />
     </div>
   )
 }
